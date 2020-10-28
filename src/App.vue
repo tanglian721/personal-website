@@ -1,32 +1,52 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+  <div class="app">
+    <personal-info />
+    <nav-bar />
+    <home-background />
   </div>
 </template>
+<script>
+import HomeBackground from "../src/components/homepageBackground.vue";
+import NavBar from "../src/components/navBar.vue";
+import PersonalInfo from "../src/components/personalInfo.vue";
+export default {
+  components: {
+    HomeBackground,
+    PersonalInfo,
+    NavBar
+  }
+};
+</script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@import url("https://fonts.googleapis.com/css2?family=Jura&family=Orbitron:wght@400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
 }
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+a{
+  text-decoration: none;
+  color: white;
+}
+.app {
+  position: relative;
+  width: 100vw;
+  height: 300vh;
+  .home-background {
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 300vh;
+    // background-color: rgba(0, 255, 255, 0.082);
+    top: 0%;
+  }
+  .personal-info {
+    z-index: 50;
+    position: relative;
+  }
+  .nav-bar{
+    z-index: 90;
+    position: absolute;
   }
 }
 </style>
