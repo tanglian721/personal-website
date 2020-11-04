@@ -8,11 +8,11 @@
       <img src="../assets/MyEmoji.gif" alt="" />
     </div>
     <div id="interesting">
-      <img id="bake" src="../assets/bake.png" alt="">
-      <img id="dslr" src="../assets/dslr-camera.png" alt="">
-      <img id="ball" src="../assets/football-ball.png" alt="">
-      <img id="game" src="../assets/game-console.png" alt="">
-      <img id="code" src="../assets/code.png" alt="">
+      <img id="code" src="../assets/code.png" alt="" />
+      <img id="bake" src="../assets/bake.png" alt="" />
+      <img id="dslr" src="../assets/dslr-camera.png" alt="" />
+      <img id="ball" src="../assets/football-ball.png" alt="" />
+      <img id="game" src="../assets/game-console.png" alt="" />
     </div>
   </div>
 </template>
@@ -25,6 +25,9 @@ export default {
 
 <style lang="scss" scoped>
 .personal-info {
+  width: 100%;
+  overflow: hidden;
+  height: 60vh;
   #text-info {
     font-family: "Orbitron", sans-serif;
     color: white;
@@ -52,30 +55,78 @@ export default {
     top: 15vh;
     width: 40vw;
     height: 25vh;
-    img{
+    img {
       position: absolute;
       width: 12vw;
     }
     #bake {
       top: 0;
       left: 0;
-    };
+    }
     #dslr {
       top: 0;
       right: 0;
-    };
+    }
     #ball {
       bottom: 0;
       left: 0;
-    };
+    }
     #game {
-     bottom: 0;
+      bottom: 0;
       right: 0;
-    };
+    }
     #code {
       width: 20vw;
       left: 11vw;
       top: 8vh;
+    }
+  }
+}
+@media only screen and (min-width: 1366px) {
+  .personal-info {
+    #text-info {
+      font-size: 3rem;
+      #major {
+        font-size: 2rem;
+      }
+    }
+    #img {
+      img {
+        width: 8vw;
+      }
+    }
+    #interesting {
+      width: 70vw;
+      height: 30vh;
+      top: 15vh;
+      // background-color: white;
+      img {
+        position: relative;
+        width: 8vw;
+        margin-left: 5vw;
+      }
+      #bake {
+        top: 0;
+        left: 0;
+      }
+      #dslr {
+        top: 0;
+        left: 0;
+      }
+      #ball {
+         top: 0;
+        left: 0;
+      }
+      #game {
+         top: 0;
+        left: 0;
+      }
+      #code {
+        width: 10vw;
+        margin-left: 0;
+         top: 0;
+        left: 0;
+      }
     }
   }
 }

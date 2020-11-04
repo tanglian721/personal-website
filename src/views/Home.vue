@@ -1,18 +1,92 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="home-page">
+    sdadsa
+    <nav-bar />
+    <personal-info />
+    <!-- <span id="about"></span> -->
+    <about-me />
+    <span id="portfolio"></span>
+    <my-portfolio  />
+    <span id="contact"></span>
+    <contact />
+    <home-background />
   </div>
 </template>
-
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import HomeBackground from "../components/homepageBackground";
+import NavBar from "../components/navBar.vue";
+import AboutMe from "../components/about.vue";
+import MyPortfolio from "../components/portfolio.vue";
+import PersonalInfo from "../components/personalInfo.vue";
+import contact from "../components/contact.vue";
 
 export default {
-  name: "Home",
+  name: "home-page",
   components: {
-    HelloWorld
+    HomeBackground,
+    PersonalInfo,
+    NavBar,
+    MyPortfolio,
+    AboutMe,
+    contact
   }
 };
 </script>
+
+<style lang="scss">
+@import url("https://fonts.googleapis.com/css2?family=Jura&family=Orbitron:wght@400;500&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.home-page {
+  position: relative;
+  width: 100vw;
+  height: 260vh;
+  overflow: hidden;
+  .home-background {
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    // background-color: rgba(0, 255, 255, 0.082);
+    top: 0%;
+  }
+  .personal-info {
+    z-index: 50;
+    position: relative;
+  }
+  .nav-bar {
+    z-index: 90;
+    position: absolute;
+  }
+  .about-me {
+    z-index: 50;
+    position: relative;
+  }
+  .portfolio {
+    z-index: 50;
+    position: relative;
+  }
+  .contact {
+    z-index: 50;
+    position: relative;
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  .home-page {
+ 
+    height: 300vh;
+
+  
+  }
+}
+</style>
