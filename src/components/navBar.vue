@@ -1,7 +1,7 @@
 <template>
   <div class="nav-bar">
     <div id="nav-area">
-      <a href="/#">about me</a>
+      <a href="/#about">about me</a>
       <a href="/#portfolio">portfolio</a>
       <a href="/#contact">contact me</a>
     </div>
@@ -37,9 +37,9 @@ export default {
   > div {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 5vw;
+    column-gap: 3vw;
     a {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
       transform: rotate(-10deg);
     }
   }

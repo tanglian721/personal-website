@@ -107,7 +107,7 @@ export default {
     top: -50%;
     left: -60%;
     width: 200vw;
-    height: 80vh;
+    height: 20vh;
     background: #7d84b2;
     box-shadow: 0px 1px 4px 0px #000000 25%;
   }

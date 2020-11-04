@@ -85,9 +85,9 @@ export default {
 @media only screen and (min-width: 1366px) {
   .personal-info {
     #text-info {
-      font-size: 3rem;
+      font-size: 2.5rem;
       #major {
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
     }
     #img {
@@ -102,7 +102,7 @@ export default {
       // background-color: white;
       img {
         position: relative;
-        width: 8vw;
+        width: 6vw;
         margin-left: 5vw;
       }
       #bake {
@@ -122,7 +122,7 @@ export default {
         left: 0;
       }
       #code {
-        width: 10vw;
+        width: 8vw;
         margin-left: 0;
          top: 0;
         left: 0;

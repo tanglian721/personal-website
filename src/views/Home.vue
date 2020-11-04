@@ -3,11 +3,10 @@
     sdadsa
     <nav-bar />
     <personal-info />
-    <!-- <span id="about"></span> -->
+    <span id="about"></span>
     <about-me />
-    <span id="portfolio"></span>
     <my-portfolio  />
-    <span id="contact"></span>
+    
     <contact />
     <home-background />
   </div>
@@ -73,11 +72,11 @@ a {
   }
   .portfolio {
     z-index: 50;
-    position: relative;
+    position: absolute;
   }
   .contact {
     z-index: 50;
-    position: relative;
+    position: absolute;
   }
 }
 

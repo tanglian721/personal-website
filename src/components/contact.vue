@@ -1,5 +1,6 @@
 <template>
   <div class="contact">
+    <span id="contact"></span>
     <h2>my contact</h2>
     <div id="link">
       <a href="mailto:taylor721@gmail.com">[ Email ]</a>
@@ -18,9 +19,9 @@ export default {
 <style lang="scss" scoped>
 .contact {
   width: 80vw;
-  height: 90vh;
+  height: 20vh;
   margin-left: 10vw;
-  top: 11%;
+  bottom:5vh;
     font-family: "Jura", sans-serif;
   h2 {
     color: white;
@@ -42,10 +43,9 @@ export default {
 @media only screen and (min-width: 1366px) {
 .contact {
   width: 80vw;
-  height: 90vh;
+  height: 10vh;
   margin-left: 10vw;
-  top: 25%;
-    font-family: "Jura", sans-serif;
+  font-family: "Jura", sans-serif;
   h2 {
     color: white;
     font-size: 3rem;

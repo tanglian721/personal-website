@@ -1,5 +1,6 @@
 <template>
   <div class="portfolio">
+    <span id="portfolio"></span>
     <h2 id="title">portfolio</h2>
     <div id="slider">
       <hooper id="frame" :settings="hooperSettings">
@@ -281,7 +282,7 @@ export default {
   width: 90vw;
   height: 90vh;
   margin-left: 5vw;
-  top: 16%;
+  bottom: 15vh;
   #title {
     position: absolute;
     color: white;
@@ -401,7 +402,7 @@ export default {
   }
   .portfolio {
 
-  top: 15%;
+ bottom: 30vh;
   #title {
     top:55%;
     right: 5vw;
@@ -412,8 +413,8 @@ export default {
     top: 5vh;
     left:10vw;
     // background-color:white;
-    width: 45vw;
-    height: 47vw;
+    width: 40vw;
+    height: 42vw;
     #frame {
       widows: 100%;
       height: 100%;

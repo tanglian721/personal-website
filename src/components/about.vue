@@ -1,8 +1,9 @@
 <template>
   <div class="about-me">
     <h2 id="title"> about me </h2>
-    <p id="content">Hey There! 
-My name is Liang (Taylor) Tang . I am a full stack development student. I'm currently enrolled in a Full Stack Development Diploma program, graduating in December of 2020. I am a driven, passionate, and curious learner with a willingness to learn. There is something about negative space that is eye catching as I am very much about minimalism. I'm on the search for my first Developer position be it an internship or something more. Please reach out if you are interested in chatting more!
+     
+    <p id="content">Hey There! <br>
+My name is Liang (Taylor) Tang . I am a full stack development student. I'm currently enrolled in a Full Stack Development Diploma program, graduating in December of 2020. I like photography,cooking, soccer, video games and CODING.  I am looking for my first job or internship of web development. Please contact me if you are interested in chatting with me!
 </p>
 
   </div>
@@ -36,14 +37,14 @@ My name is Liang (Taylor) Tang . I am a full stack development student. I'm curr
   top: 5%;
   #title {
     width: 100%;
-    margin-bottom: 15vh;
+    margin-bottom: 10vh;
     text-align: right;
     padding-right: 5vw;
     font-size: 2.5rem;
   }
   #content {
     font-size: 2rem;
-    line-height: 4rem;
+    line-height: 3.5rem;
   }
 }
 }
