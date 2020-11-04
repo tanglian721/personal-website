@@ -2,7 +2,7 @@
   <div class="home-page">
     <nav-bar />
     <personal-info />
-    <span id="about"></span>
+    
     <about-me />
     <page-skill />
     <my-portfolio  />

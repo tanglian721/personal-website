@@ -77,9 +77,7 @@ export default {
 
 @media only screen and (min-width: 1366px) {
   .home-background {
-    // z-index: 0;
-    // overflow: hidden;
-    // box-sizing: border-box;
+
     #layOne {
       top: -10%;
       left: -50%;

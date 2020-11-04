@@ -3,7 +3,6 @@
     <span id="skill"></span>
     <div id="title">technical skills</div>
     <div id="frame">
-      <!-- <ul> -->
       <li>HTML5</li>
       <li>CSS3/SASS</li>
       <li>JavaScript</li>
@@ -16,7 +15,6 @@
       <li>APis</li>
       <li>Wordpress</li>
       <li>Bash</li>
-      <!-- </ul> -->
     </div>
   </div>
 </template>

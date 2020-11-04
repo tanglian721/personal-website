@@ -1,7 +1,7 @@
 <template>
   <div class="about-me">
+    <span id="about"></span>
     <h2 id="title">about me</h2>
-
     <p id="content">
       Hey There! <br />
       My name is Liang (Taylor) Tang . I am a full stack development student.
