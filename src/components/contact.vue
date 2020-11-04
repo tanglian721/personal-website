@@ -21,7 +21,7 @@ export default {
   width: 80vw;
   height: 20vh;
   margin-left: 10vw;
-  bottom:5vh;
+  bottom:-2vh;
     font-family: "Jura", sans-serif;
   h2 {
     color: white;
@@ -32,9 +32,9 @@ export default {
     // background-color: white;
     >a {
       position: relative;
-      top: 5vh;
+      top: 3vh;
       display: inline-block;
-      padding: 4vw;
+      padding: 3vw;
        transform: rotate(20deg);
        font-size: 1.2rem;
     }

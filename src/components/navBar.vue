@@ -2,6 +2,7 @@
   <div class="nav-bar">
     <div id="nav-area">
       <a href="/#about">about me</a>
+      <a href="/#skill">technical skills</a>      
       <a href="/#portfolio">portfolio</a>
       <a href="/#contact">contact me</a>
     </div>
@@ -20,27 +21,29 @@ export default {
   top: 25vh;
   > div {
     display: grid;
-    row-gap: 10vh;
+    row-gap: 7vh;
     a {
       display: block;
       font-family: "Orbitron", sans-serif;
       font-size: 1.2rem;
       transform: rotate(25deg);
       filter: drop-shadow(0px 0px 5px black);
+      text-align: right;
     }
   }
 }
 @media only screen and (min-width: 1366px) {
   .nav-bar {
   right: 20vw;
-  top: 8vh;
+  top: 12vh;
   > div {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 3vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 1vw;
     a {
-      font-size: 1.5rem;
+      font-size: 1rem;
       transform: rotate(-10deg);
+      text-align: center;
     }
   }
 }

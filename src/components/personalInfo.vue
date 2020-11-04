@@ -84,26 +84,30 @@ export default {
 }
 @media only screen and (min-width: 1366px) {
   .personal-info {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5vh;
     #text-info {
-      font-size: 2.5rem;
+      font-size: 2rem;
       #major {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
       }
     }
     #img {
       img {
-        width: 8vw;
+        width: 6vw;
       }
     }
     #interesting {
-      width: 70vw;
+      width: 50vw;
       height: 30vh;
-      top: 15vh;
+      top: 10vh;
+      left: 5vw;
       // background-color: white;
       img {
         position: relative;
-        width: 6vw;
-        margin-left: 5vw;
+        width: 4vw;
+        margin-left: 2vw;
       }
       #bake {
         top: 0;
@@ -122,7 +126,7 @@ export default {
         left: 0;
       }
       #code {
-        width: 8vw;
+        width: 4vw;
         margin-left: 0;
          top: 0;
         left: 0;

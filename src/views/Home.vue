@@ -1,12 +1,11 @@
 <template>
   <div class="home-page">
-    sdadsa
     <nav-bar />
     <personal-info />
     <span id="about"></span>
     <about-me />
+    <page-skill />
     <my-portfolio  />
-    
     <contact />
     <home-background />
   </div>
@@ -15,6 +14,7 @@
 import HomeBackground from "../components/homepageBackground";
 import NavBar from "../components/navBar.vue";
 import AboutMe from "../components/about.vue";
+import PageSkill from "../components/skill.vue";
 import MyPortfolio from "../components/portfolio.vue";
 import PersonalInfo from "../components/personalInfo.vue";
 import contact from "../components/contact.vue";
@@ -27,6 +27,7 @@ export default {
     NavBar,
     MyPortfolio,
     AboutMe,
+    PageSkill,
     contact
   }
 };
@@ -48,7 +49,7 @@ a {
 .home-page {
   position: relative;
   width: 100vw;
-  height: 260vh;
+  height: 300vh;
   overflow: hidden;
   .home-background {
     z-index: 0;
@@ -70,6 +71,10 @@ a {
     z-index: 50;
     position: relative;
   }
+  .skill {
+    z-index: 50;
+    position: relative;
+  }
   .portfolio {
     z-index: 50;
     position: absolute;
@@ -82,8 +87,8 @@ a {
 
 @media only screen and (min-width: 1366px) {
   .home-page {
- 
-    height: 300vh;
+     
+    height: 330vh;
 
   
   }

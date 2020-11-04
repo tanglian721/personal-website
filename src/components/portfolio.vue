@@ -224,8 +224,9 @@
                 <a
                   href="https://github.com/tanglian721/WeatherForecasts"
                   class="github"
-                  >View Code</a>
-                <div> </div>
+                  >View Code</a
+                >
+                <div></div>
               </div>
             </transition>
           </div>
@@ -239,9 +240,7 @@
 
 <script>
 import { Hooper, Slide, pagination as HooperPagination } from "hooper";
-import {
-  Navigation as HooperNavigation
-  } from 'hooper';
+import { Navigation as HooperNavigation } from "hooper";
 import "hooper/dist/hooper.css";
 export default {
   name: "my-portfolio",
@@ -261,7 +260,6 @@ export default {
       },
       if_intro: false,
       portfolio: [{ img: "../assets/Okotoks Pizza 1.png" }]
-
     };
   },
   methods: {
@@ -274,7 +272,7 @@ export default {
 
 <style lang="scss" scoped>
 @import url(https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css);
-.desk{
+.desk {
   display: none;
 }
 .portfolio {
@@ -282,11 +280,11 @@ export default {
   width: 90vw;
   height: 90vh;
   margin-left: 5vw;
-  bottom: 15vh;
+  bottom: -5vh;
   #title {
     position: absolute;
     color: white;
-    right: 0;
+    left: 5vw;
     font-family: "Jura", sans-serif;
     font-size: 2rem;
     text-shadow: 1px 1px 5px rgba($color: #000000, $alpha: 1);
@@ -301,17 +299,17 @@ export default {
       widows: 100%;
       height: 100%;
       position: relative;
-      // padding: 5vw;
       border-radius: 20px;
-      // box-sizing: content-box;
+    
       .portfolio-content {
         width: 100%;
         height: 100%;
-        background-color: #2f2f2f6c;
         border-radius: 10%;
-        padding: 0 3vh;
+          display: grid;
+      justify-items: center;
+        // padding: 0 3vh;
         .title {
-          width: 90%;
+          width: 100%;
           height: 15%;
           top: 2vh;
           position: absolute;
@@ -325,13 +323,13 @@ export default {
           z-index: 50;
           position: relative;
           top: 15%;
-          width: 100%;
+          width: 80vw;
           height: 85%;
           overflow: hidden;
           .img {
             z-index: 50;
             position: absolute;
-            width: 100%;
+            width: 80vw;
           }
           .link {
             z-index: 60;
@@ -340,10 +338,11 @@ export default {
             right: 0;
             width: 10%;
             height: 8%;
-            background-color: #8fa6cb;
+            background-color: #000000;
             display: grid;
             align-items: center;
             justify-items: center;
+            border: 1px solid white;
             border-radius: 10%;
             box-shadow: 5px 5px 5px gray;
             img {
@@ -394,112 +393,110 @@ export default {
   }
 }
 @media only screen and (min-width: 1366px) {
-  .desk{
+  .desk {
     display: block;
   }
-  .mobile{
+  .mobile {
     display: none;
   }
   .portfolio {
-
- bottom: 30vh;
-  #title {
-    top:55%;
-    right: 5vw;
-    font-size: 3rem;
-  }
-  #slider {
-    position: relative;
-    top: 5vh;
-    left:10vw;
-    // background-color:white;
-    width: 40vw;
-    height: 42vw;
-    #frame {
-      widows: 100%;
-      height: 100%;
-      position: relative;
-      // padding: 5vw;
-      border-radius: 20px;
-      // box-sizing: content-box;
-      .portfolio-content {
-        width: 100%;
+    bottom: 5vh;
+    #title {
+      top: 30%;
+      right: 0;
+      font-size: 2.5rem;
+    }
+    #slider {
+      position: absolute;
+      top: 5vh;
+      right: 10vw;
+      // background-color:white;
+      width: 40vw;
+      height: 42vw;
+      #frame {
+        widows: 100%;
         height: 100%;
-        background-color: #dcf4a700;
-        padding: 0;
-        
-        .title {
-          width: 80%;
-          margin-left: 10%;
-          height: 5%;
-          text-align: left;
-          top: 0;
-          font-size: 2.5rem;
-        }
-        .content {
-          z-index: 50;
-          position: relative;
-          top: 12%;
+        position: relative;
+        // padding: 5vw;
+        border-radius: 20px;
+        // box-sizing: content-box;
+        .portfolio-content {
           width: 100%;
-          height: 95%;
-          
-          overflow: hidden;
-          .img {
-            z-index: 50;
-            position: absolute;
-            width: 100%;
-          }
-          .link {
-            z-index: 60;
-            position: absolute;
+          height: 100%;
+          background-color: #dcf4a700;
+          padding: 0;
+
+          .title {
+            width: 80%;
+            margin-left: 10%;
+            height: 5%;
+            text-align: center;
             top: 0;
-            right: 0;
-            width: 6%;
-            height: 6%;
-            background-color: #8fa6cb;
-            display: grid;
-            align-items: center;
-            justify-items: center;
-            border-radius: 10%;
-            box-shadow: 5px 5px 5px gray;
-            img {
-              position: relative;
-              width: 80%;
-            }
+            font-size: 2rem;
           }
-          .intro {
-            height: 90%;
-            grid-template-rows: 2fr 1fr 3fr 2fr 2fr 1fr;
-            .splitter {
-              height: 2px;
-              width: 90%;
-              background: white;
+          .content {
+            z-index: 50;
+            position: relative;
+            top: 12%;
+            width: 80%;
+            height: 95%;
+
+            overflow: hidden;
+            .img {
+              z-index: 50;
+              position: absolute;
+              width: 100%;
             }
-            h3 {
-              font-size: 3rem;
-              justify-self: start;
-              align-self: end;
-              margin-left: 5%;
-            }
-            p {
-              width: 90%;
-              font-size: 2rem;
-            }
-            .github {
+            .link {
               z-index: 60;
-              font-size: 2rem;
-              background: #d5f9de;
-              margin-bottom: 5%;
-              padding: 5px 10px;
-              color: #8fa6cb;
-              border-radius: 5px;
-              filter: drop-shadow(1px 1px 5px gray);
+              position: absolute;
+              top: 0;
+              right: 0;
+              width: 7%;
+              height: 6%;
+              display: grid;
+              align-items: center;
+              justify-items: center;
+              border-radius: 10%;
+              box-shadow: 5px 5px 5px  gray;
+              img {
+                position: relative;
+                width: 80%;
+              }
+            }
+            .intro {
+              height: 72%;
+              grid-template-rows: 2fr 1fr 3fr 2fr 2fr 1fr;
+              .splitter {
+                height: 2px;
+                width: 90%;
+                background: white;
+              }
+              h3 {
+                font-size: 2rem;
+                justify-self: start;
+                align-self: end;
+                margin-left: 5%;
+              }
+              p {
+                width: 90%;
+                font-size: 1.5rem;
+              }
+              .github {
+                z-index: 60;
+                font-size: 1.5rem;
+                background: #d5f9de;
+                margin-bottom: 5%;
+                padding: 5px 10px;
+                color: black;
+                border-radius: 5px;
+                filter: drop-shadow(1px 1px 5px gray);
+              }
             }
           }
         }
       }
     }
   }
-}
 }
 </style>
