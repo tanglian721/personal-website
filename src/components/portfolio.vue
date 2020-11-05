@@ -2,6 +2,7 @@
   <div class="portfolio">
     <h2 id="title">portfolio</h2>
     <span id="portfolio"></span>
+       <vue-aos animation-class="animate__animated animate__flipInY">
     <div id="slider">
       <hooper id="frame" :settings="hooperSettings">
 
@@ -236,6 +237,7 @@
         <hooper-navigation slot="hooper-addons"></hooper-navigation>
       </hooper>
     </div>
+       </vue-aos>
     <div id="layFour"></div>
   </div>
 </template>
@@ -244,13 +246,17 @@
 import { Hooper, Slide, pagination as HooperPagination } from "hooper";
 import { Navigation as HooperNavigation } from "hooper";
 import "hooper/dist/hooper.css";
+import VueAos from 'vue-aos'
+
 export default {
   name: "my-portfolio",
   components: {
     Hooper,
     Slide,
     HooperPagination,
-    HooperNavigation
+    HooperNavigation,
+    VueAos
+
   },
   data() {
     return {

@@ -2,18 +2,25 @@
   <div class="contact">
     <h2 id="contact">my contact</h2>
     <span id="contact"></span>
+    <vue-aos animation-class="animate__animated animate__fadeIn">
     <div id="link">
       <a href="mailto:taylor721@gmail.com">[ Email ]</a>
       <a href="https://www.linkedin.com/in/liang-tang-192702a4/">[ Linkin ]</a>
       <a href="https://github.com/tanglian721">[ GitHub ]</a>
     </div>
+    </vue-aos>
     <div id="layFive"></div>
   </div>
 </template>
 
 <script>
+import VueAos from 'vue-aos'
+
 export default {
-  name: "contact"
+  name: "contact",
+  components: {
+    VueAos
+  }
 };
 </script>
 

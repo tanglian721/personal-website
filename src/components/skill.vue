@@ -2,9 +2,8 @@
   <div class="skill">
     <span id="skill"></span>
     <div id="title">technical skills</div>
-      <transition appear
-      enter-active-class="animate__animated animate__slideInRight"
-    >
+      <p id="content">
+    <vue-aos animation-class="animate__animated animate__slideInRight">
     <div id="frame">
       <li>HTML5</li>
       <li>CSS3/SASS</li>
@@ -19,15 +18,20 @@
       <li>Wordpress</li>
       <li>Bash</li>
     </div>
-      </transition>
+      </vue-aos>
       <div id="layThree"></div>
 
   </div>
 </template>
 
 <script>
+import VueAos from 'vue-aos'
+
 export default {
-  name: "page-skill"
+  name: "page-skill",
+    components: {
+    VueAos
+  }
 };
 </script>
 

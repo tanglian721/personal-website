@@ -2,10 +2,11 @@
   <div class="about-me">
     <span id="about"></span>
     <h2 id="title">about me</h2>
-    <transition
+    <!-- <transition
       appear
       enter-active-class="animate__animated animate__slideInRight"
-    >
+    > -->
+     <vue-aos animation-class="animate__animated animate__slideInRight">
       <p id="content">
         Hey There! <br />
         My name is Liang (Taylor) Tang . I am a full stack development student.
@@ -15,14 +16,19 @@
         web development. Please contact me if you are interested in chatting
         with me!
       </p>
-    </transition>
+    </vue-aos>
+    <!-- </transition> -->
     <div id="layTwo"></div>
   </div>
 </template>
 
 <script>
+import VueAos from 'vue-aos'
 export default {
-  name: "about-me"
+  name: "about-me",
+  components: {
+    VueAos
+  }
 };
 </script>
 
