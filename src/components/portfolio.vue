@@ -1,9 +1,10 @@
 <template>
   <div class="portfolio">
-    <span id="portfolio"></span>
     <h2 id="title">portfolio</h2>
+    <span id="portfolio"></span>
     <div id="slider">
       <hooper id="frame" :settings="hooperSettings">
+
         <slide id="pizza1" class="portfolio-content">
           <h3 class="title">Okotoks Pizza Version 1</h3>
           <div class="content">
@@ -235,6 +236,7 @@
         <hooper-navigation slot="hooper-addons"></hooper-navigation>
       </hooper>
     </div>
+    <div id="layFour"></div>
   </div>
 </template>
 
@@ -276,23 +278,39 @@ export default {
   display: none;
 }
 .portfolio {
-  // background: white;
+  #layFour {
+    z-index: 1;
+    position: absolute;
+    top: 20vh;
+    left: -80vw;
+    width: 250vw;
+    height: 100vh;
+    background: #7d84b2;
+    box-shadow: 0px 1px 4px 0px #000000 25%;
+    transform: rotate(-20deg);
+  }
   width: 90vw;
   height: 90vh;
   margin-left: 5vw;
-  bottom: -5vh;
+ #portfolio{
+   position: absolute;
+   z-index: 37;
+   top: 30vh;
+ }
   #title {
-    position: absolute;
+    z-index: 37;
+    position: relative;
     color: white;
+    top: 50vh;
     left: 5vw;
     font-family: "Jura", sans-serif;
     font-size: 2rem;
     text-shadow: 1px 1px 5px rgba($color: #000000, $alpha: 1);
   }
   #slider {
+    z-index: 37;
     position: relative;
-    top: 10vh;
-    //  background-color:white;
+    top: 55vh;
     width: 100%;
     height: 50vh;
     #frame {
@@ -300,13 +318,13 @@ export default {
       height: 100%;
       position: relative;
       border-radius: 20px;
-    
+
       .portfolio-content {
         width: 100%;
         height: 100%;
         border-radius: 10%;
-          display: grid;
-      justify-items: center;
+        display: grid;
+        justify-items: center;
         // padding: 0 3vh;
         .title {
           width: 100%;
@@ -401,15 +419,21 @@ export default {
   }
   .portfolio {
     bottom: 5vh;
+    #layFour {
+      top: -10vh;
+      left: -80vw;
+      height: 140vh;
+      transform: rotate(-10deg);
+    }
     #title {
-      top: 30%;
-      right: 0;
-      font-size: 2.5rem;
+      top: 70vh;
+      left: 70vw;
+      font-size: 3rem;
     }
     #slider {
       position: absolute;
-      top: 5vh;
-      right: 10vw;
+      top: 40vh;
+      left: 10vw;
       // background-color:white;
       width: 40vw;
       height: 42vw;
@@ -458,7 +482,7 @@ export default {
               align-items: center;
               justify-items: center;
               border-radius: 10%;
-              box-shadow: 5px 5px 5px  gray;
+              box-shadow: 5px 5px 5px gray;
               img {
                 position: relative;
                 width: 80%;

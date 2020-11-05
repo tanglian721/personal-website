@@ -6,11 +6,9 @@
     <page-skill />
     <my-portfolio  />
     <contact />
-    <home-background />
   </div>
 </template>
 <script>
-import HomeBackground from "../components/homepageBackground";
 import NavBar from "../components/navBar.vue";
 import AboutMe from "../components/about.vue";
 import PageSkill from "../components/skill.vue";
@@ -21,7 +19,6 @@ import contact from "../components/contact.vue";
 export default {
   name: "home-page",
   components: {
-    HomeBackground,
     PersonalInfo,
     NavBar,
     MyPortfolio,
@@ -48,7 +45,7 @@ a {
 .home-page {
   position: relative;
   width: 100vw;
-  height: 300vh;
+  height: 380vh;
   overflow: hidden;
   .home-background {
     z-index: 0;
@@ -67,19 +64,19 @@ a {
     position: absolute;
   }
   .about-me {
-    z-index: 50;
+    z-index: 45;
     position: relative;
   }
   .skill {
-    z-index: 50;
+    z-index: 40;
     position: relative;
   }
   .portfolio {
-    z-index: 50;
-    position: absolute;
+    z-index: 35;
+    position: relative;
   }
   .contact {
-    z-index: 50;
+    z-index: 30;
     position: absolute;
   }
 }
@@ -87,7 +84,7 @@ a {
 @media only screen and (min-width: 1366px) {
   .home-page {
      
-    height: 330vh;
+    height: 400vh;
 
   
   }
