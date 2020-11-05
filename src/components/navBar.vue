@@ -1,10 +1,12 @@
 <template>
   <div class="nav-bar">
     <div id="nav-area">
-      <a href="/#about">about me</a>
+      <!-- <a href="/#about">about me</a>
       <a href="/#skill">technical skills</a>      
       <a href="/#portfolio">portfolio</a>
-      <a href="/#contact">contact me</a>
+      <a href="/#contact">contact me</a> -->
+      <p>Scroll <br> Down</p>
+      <img src="../assets/gif-arrow.gif" alt="">
     </div>
   </div>
 </template>
@@ -21,7 +23,17 @@ export default {
   top: 25vh;
   > div {
     display: grid;
-    row-gap: 7vh;
+    row-gap: 1vh;
+    p{
+      font-family: "Orbitron", sans-serif;
+      font-size: 1.2rem;
+      color: white;
+    }
+    img{
+      z-index: 90;
+      width: 20vw;
+      border: 1px solid black;
+    }
     a {
       display: block;
       font-family: "Orbitron", sans-serif;
@@ -38,8 +50,20 @@ export default {
   top: 12vh;
   > div {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    // grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 1vw;
+    p{
+      position: absolute;
+      right:-10vw;
+      top:20vh
+    }
+    img{
+      position: absolute;
+      right:-11vw;
+      width: 6vw;
+      top:25vh
+  
+    }
     a {
       font-size: 1rem;
       transform: rotate(-10deg);

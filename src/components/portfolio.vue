@@ -59,7 +59,7 @@
               src="../assets/pizza2-m.png"
               alt=""
             />
-            <a href="" class="link">
+            <a href="https://tangpizza.tk/" class="link">
               <img src="../assets/external-link.png" alt="" />
             </a>
             <transition

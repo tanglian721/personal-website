@@ -2,7 +2,6 @@
   <div class="home-page">
     <nav-bar />
     <personal-info />
-    
     <about-me />
     <page-skill />
     <my-portfolio  />

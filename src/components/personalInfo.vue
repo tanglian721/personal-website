@@ -51,7 +51,7 @@ export default {
   }
   #interesting {
     position: relative;
-    left: 8vw;
+    left: 15vw;
     top: 15vh;
     width: 40vw;
     height: 25vh;
