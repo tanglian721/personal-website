@@ -32,7 +32,7 @@ export default {
     img{
       z-index: 90;
       width: 20vw;
-      border: 1px solid black;
+      margin-left: -3vw;
     }
     a {
       display: block;
