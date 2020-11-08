@@ -71,7 +71,12 @@ export default {
 }
 @media only screen and (min-width: 1366px) {
   .about-me {
-     top: -10vh;
+  #about{
+    position: absolute;
+    top: -30vh;
+  }
+     top: -20vh;
+     position: relative;
     #layTwo {
       top: -100vh;
       left: -80vw;

@@ -5,7 +5,6 @@
        <vue-aos animation-class="animate__animated animate__fadeInUp">
     <div id="slider">
       <hooper id="frame" :settings="hooperSettings">
-
         <slide id="pizza1" class="portfolio-content">
           <h3 class="title">Okotoks Pizza Version 1</h3>
           <div class="content">
@@ -324,7 +323,6 @@ export default {
       height: 100%;
       position: relative;
       border-radius: 20px;
-
       .portfolio-content {
         width: 100%;
         height: 100%;
@@ -348,27 +346,28 @@ export default {
           position: relative;
           top: 15%;
           width: 80vw;
-          height: 85%;
+          height: 71.1vw;
           overflow: hidden;
           .img {
             z-index: 50;
             position: absolute;
-            width: 80vw;
+            width: 100%;
+            height: 100%;
           }
           .link {
             z-index: 60;
             position: absolute;
-            top: 0;
-            right: 0;
-            width: 10%;
-            height: 8%;
+            top: 1%;
+            right: 1%;
+            width: 11%;
+            height: 12%;
             background-color: #000000;
             display: grid;
             align-items: center;
             justify-items: center;
             border: 1px solid white;
             border-radius: 10%;
-            box-shadow: 5px 5px 5px gray;
+            box-shadow: 8px 8px 25px 10px gray;
             img {
               position: relative;
               width: 80%;
@@ -378,7 +377,7 @@ export default {
             z-index: 55;
             position: absolute;
             width: 100%;
-            height: 80%;
+            height: 100%;
             background-color: rgba($color: #181818, $alpha: 0.9);
             top: 0;
             color: white;
@@ -441,7 +440,7 @@ export default {
       top: 40vh;
       left: 10vw;
       // background-color:white;
-      width: 40vw;
+      width: 42vw;
       height: 42vw;
       #frame {
         widows: 100%;
@@ -469,33 +468,31 @@ export default {
             position: relative;
             top: 12%;
             width: 80%;
-            height: 95%;
+            height: 71.1%;
 
             overflow: hidden;
             .img {
               z-index: 50;
               position: absolute;
-              width: 100%;
+              
             }
             .link {
               z-index: 60;
               position: absolute;
-              top: 0;
-              right: 0;
+              top: 1%;
+              right: 1%;
               width: 7%;
-              height: 6%;
+              height: 8%;
               display: grid;
               align-items: center;
               justify-items: center;
               border-radius: 10%;
-              box-shadow: 5px 5px 5px gray;
               img {
                 position: relative;
                 width: 80%;
               }
             }
             .intro {
-              height: 72%;
               grid-template-rows: 2fr 1fr 3fr 2fr 2fr 1fr;
               .splitter {
                 height: 2px;

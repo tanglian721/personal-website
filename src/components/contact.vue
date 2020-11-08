@@ -43,7 +43,7 @@ export default {
   }
   h2 {
     position: absolute;
-    top: -10vh;
+    top: -8vh;
     right: 0;
     z-index: 32;
     color: white;
@@ -59,7 +59,7 @@ export default {
     // background-color: white;
     >a {
       position: relative;
-      top: 5vh;
+      top: 8vh;
       display: inline-block;
       transform: rotate(20deg);
       font-size: 1.2rem;

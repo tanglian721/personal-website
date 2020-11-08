@@ -12,6 +12,9 @@
         <p>Down</p>
         <img src="../assets/gif-arrow.gif" alt="" />
       </div>
+      <a href="/#" id="toTop">
+        <img src="../assets/up.png" alt="" />
+      </a>
     </div>
   </div>
 </template>
@@ -57,6 +60,19 @@ export default {
         margin-right: 0vw;
       }
     }
+    #toTop {
+      position: fixed;
+      bottom: 12vh;
+      left: 10vw;
+      img {
+        width: 15vw;
+        filter: drop-shadow(5px 5px 15px black);
+        &:active {
+          filter: drop-shadow(0px 0px 5px black);
+        }
+        opacity: 0.8;
+      }
+    }
   }
 }
 @media only screen and (min-width: 1366px) {
@@ -72,7 +88,7 @@ export default {
         a {
           font-size: 1.2rem;
           transform: rotate(15deg);
-          &:hover{
+          &:hover {
             filter: drop-shadow(5px 5px 15px black);
           }
           text-align: center;
@@ -95,6 +111,15 @@ export default {
           margin-right: 0vw;
         }
       }
+      #toTop {
+      bottom: 8vh;
+      left: 8vw;
+      img {
+        width: 5vw;
+        
+        opacity: 0.8;
+      }
+    }
     }
   }
 }
