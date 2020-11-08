@@ -2,7 +2,7 @@
   <div class="portfolio">
     <h2 id="title">portfolio</h2>
     <span id="portfolio"></span>
-       <vue-aos animation-class="animate__animated animate__flipInY">
+       <vue-aos animation-class="animate__animated animate__fadeInUp">
     <div id="slider">
       <hooper id="frame" :settings="hooperSettings">
 

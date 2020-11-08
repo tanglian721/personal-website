@@ -37,7 +37,7 @@ export default {
     bottom: 0;
     left: -10vw;
     width: 120vw;
-    height: 50vh;
+    height: 60vh;
     background: #16425b;
     box-shadow: 0px 1px 4px 0px #000000 25%;
   }
@@ -74,7 +74,7 @@ export default {
   font-family: "Jura", sans-serif;
   h2 {
     color: white;
-    top: -20vh;
+    top: -25vh;
     font-size: 2.5rem;
     text-shadow: 1px 1px 5px rgba($color: #000000, $alpha: 1);
   }
@@ -84,7 +84,7 @@ export default {
     // background-color: white;
     >a {
       position: relative;
-      top: -4vh;
+      top: -9vh;
       display: inline-block;
       left: 20vw;
        transform: rotate(-10deg);

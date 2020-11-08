@@ -1,12 +1,17 @@
 <template>
   <div class="nav-bar">
     <div id="nav-area">
-      <!-- <a href="/#about">about me</a>
-      <a href="/#skill">technical skills</a>      
-      <a href="/#portfolio">portfolio</a>
-      <a href="/#contact">contact me</a> -->
-      <p>Scroll <br> Down</p>
-      <img src="../assets/gif-arrow.gif" alt="">
+      <div id="nav">
+        <a href="/#about">about me</a>
+        <a href="/#skill">technical skills</a>
+        <a href="/#portfolio">portfolio</a>
+        <a href="/#contact">contact me</a>
+      </div>
+      <div id="arrow">
+        <p>Scroll</p>
+        <p>Down</p>
+        <img src="../assets/gif-arrow.gif" alt="" />
+      </div>
     </div>
   </div>
 </template>
@@ -20,56 +25,77 @@ export default {
 <style lang="scss" scoped>
 .nav-bar {
   right: 5vw;
+  height: 50vh;
   top: 25vh;
   > div {
-    display: grid;
-    row-gap: 1vh;
-    p{
-      font-family: "Orbitron", sans-serif;
-      font-size: 1.2rem;
-      color: white;
+    #nav {
+      display: grid;
+      row-gap: 4vh;
+      a {
+        display: block;
+        font-family: "Orbitron", sans-serif;
+        font-size: 1rem;
+        transform: rotate(25deg);
+        filter: drop-shadow(0px 0px 5px black);
+        text-align: right;
+      }
     }
-    img{
-      z-index: 90;
-      width: 20vw;
-      margin-left: -3vw;
-    }
-    a {
-      display: block;
-      font-family: "Orbitron", sans-serif;
-      font-size: 1.2rem;
-      transform: rotate(25deg);
-      filter: drop-shadow(0px 0px 5px black);
-      text-align: right;
+    #arrow {
+      position: absolute;
+      bottom: 0;
+      right: 5vw;
+      display: grid;
+      justify-items: center;
+      p {
+        font-family: "Orbitron", sans-serif;
+        font-size: 1.2rem;
+        color: white;
+      }
+      img {
+        z-index: 90;
+        width: 20vw;
+        margin-right: 0vw;
+      }
     }
   }
 }
 @media only screen and (min-width: 1366px) {
   .nav-bar {
-  right: 20vw;
-  top: 12vh;
-  > div {
-    display: grid;
-    // grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 1vw;
-    p{
-      position: absolute;
-      right:-10vw;
-      top:20vh
-    }
-    img{
-      position: absolute;
-      right:-11vw;
-      width: 6vw;
-      top:25vh
-  
-    }
-    a {
-      font-size: 1rem;
-      transform: rotate(-10deg);
-      text-align: center;
+    right: 20vw;
+    top: 12vh;
+    > div {
+      #nav {
+        column-gap: 2vw;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        align-self: start;
+        a {
+          font-size: 1.2rem;
+          transform: rotate(15deg);
+          &:hover{
+            filter: drop-shadow(5px 5px 15px black);
+          }
+          text-align: center;
+        }
+      }
+      #arrow {
+        position: absolute;
+        bottom: 0;
+        right: -5vw;
+        display: grid;
+        justify-items: center;
+        p {
+          font-family: "Orbitron", sans-serif;
+          font-size: 1.2rem;
+          color: white;
+        }
+        img {
+          z-index: 90;
+          width: 5vw;
+          margin-right: 0vw;
+        }
+      }
     }
   }
-}
 }
 </style>

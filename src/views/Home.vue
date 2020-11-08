@@ -84,7 +84,7 @@ a {
 @media only screen and (min-width: 1366px) {
   .home-page {
      
-    height: 400vh;
+    height: 410vh;
 
   
   }
