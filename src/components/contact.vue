@@ -54,15 +54,25 @@ export default {
     position: relative;
     width: 100%;
     z-index: 35;
+    left: 5vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     // background-color: white;
     >a {
       position: relative;
-      top: 8vh;
+      top: 10vh;
       display: inline-block;
       transform: rotate(20deg);
       font-size: 1.2rem;
+      font-weight: bolder;
+      
+      &:hover{
+        font-weight: bolder;
+        background: linear-gradient(91.75deg, #0073FB -5.33%, #52FF00 107.27%);
+        background-clip: text;
+        color: transparent;
+        transition: all 0.2s linear;
+      }
     }
   }
 }
