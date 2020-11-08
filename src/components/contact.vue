@@ -37,7 +37,7 @@ export default {
     bottom: 0;
     left: -10vw;
     width: 120vw;
-    height: 60vh;
+    height: 70vh;
     background: #16425b;
     box-shadow: 0px 1px 4px 0px #000000 25%;
   }
