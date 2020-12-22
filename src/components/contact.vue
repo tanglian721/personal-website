@@ -7,6 +7,7 @@
       <a href="mailto:taylor721@gmail.com">[ Email ]</a>
       <a href="https://www.linkedin.com/in/liang-tang-192702a4/">[ Linkin ]</a>
       <a href="https://github.com/tanglian721">[ GitHub ]</a>
+      <a href="../assets/Liang Tang Resume.pdf" download>[ Resume ]</a>
     </div>
     </vue-aos>
     <div id="layFive"></div>
@@ -56,14 +57,14 @@ export default {
     z-index: 35;
     left: 5vw;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     // background-color: white;
     >a {
       position: relative;
-      top: 10vh;
+      top: 12vh;
       display: inline-block;
       transform: rotate(20deg);
-      font-size: 1.2rem;
+      font-size: 0.8rem;
       font-weight: bolder;
       
       &:hover{
@@ -89,8 +90,8 @@ export default {
     text-shadow: 1px 1px 5px rgba($color: #000000, $alpha: 1);
   }
   #link {
-    width: 60%;
-    left: 20vw;
+    width: 70%;
+    left: 10vw;
     // background-color: white;
     >a {
       position: relative;

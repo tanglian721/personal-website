@@ -5,6 +5,45 @@
        <vue-aos animation-class="animate__animated animate__fadeInUp">
     <div id="slider">
       <hooper id="frame" :settings="hooperSettings">
+        <slide id="Homedeliciouse" class="portfolio-content">
+          <h3 class="title">Okotoks Pizza Version 1</h3>
+          <div class="content">
+            <img
+              class="img desk"
+              @click="introAppear"
+              src="../assets/HomeDelicious-d.png"
+              alt=""
+            />
+            <img
+              class="img mobile"
+              @click="introAppear"
+              src="../assets/HomeDelicious-m.png"
+              alt=""
+            />
+            <a href="https://homedelicious.ml" class="link">
+              <img src="../assets/external-link.png" alt="" />
+            </a>
+            <transition
+              enter-active-class="animate__animated animate__slideInDown"
+              leave-active-class="animate__animated animate__slideOutUp"
+            >
+              <div v-if="if_intro" @click="introAppear" class="intro">
+                <h3>Home delicious website</h3>
+                <div class="splitter"></div>
+                <p>
+                  Home delicious website is the food(recipe) share website
+                </p>
+                <p class="tag">Tags: HTML, CSS/SASS, JavaScript, Vue.js, Python, Flask, MariaDB</p>
+                <p>Home delicious website is mobile and desktop compatible.</p>
+                <a
+                  href="https://github.com/tanglian721/home_delicious_frontend.git"
+                  class="github"
+                  >View Code</a
+                >
+              </div>
+            </transition>
+          </div>
+        </slide>
         <slide id="pizza1" class="portfolio-content">
           <h3 class="title">Okotoks Pizza Version 1</h3>
           <div class="content">
@@ -146,12 +185,12 @@
                 <div class="splitter"></div>
                 <p>
                   LTweeter is a simple twitter clone which is built using a
-                  VUE.js platform.
+                  VUE.js and Python.
                 </p>
-                <p class="tag">Tags:VUE.js, Api, JavaScript, HTML, CSS/SASS</p>
+                <p class="tag">Tags:VUE.js, Api, JavaScript, Python, MariaDB,,Flask, HTML, CSS/SASS</p>
                 <p>LTweeter is mobile and desktop compatible.</p>
                 <a
-                  href="https://github.com/tanglian721/Vue-Tweeter"
+                  href="https://github.com/tanglian721/tweeter_fronted"
                   class="github"
                   >View Code</a
                 >
