@@ -325,10 +325,10 @@ export default {
   #layFour {
     z-index: 1;
     position: absolute;
-    top: 20vh;
+    top: 18vh;
     left: -80vw;
     width: 250vw;
-    height: 100vh;
+    height: 102vh;
     background: #7d84b2;
     box-shadow: 0px 1px 4px 0px #000000 25%;
     transform: rotate(-20deg);
@@ -464,9 +464,9 @@ export default {
   .portfolio {
     bottom: 5vh;
     #layFour {
-      top: -10vh;
+      top: -13vh;
       left: -80vw;
-      height: 140vh;
+      height: 150vh;
       transform: rotate(-10deg);
     }
     #title {

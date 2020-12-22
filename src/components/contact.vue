@@ -44,7 +44,7 @@ export default {
   }
   h2 {
     position: absolute;
-    top: -8vh;
+    top: -6vh;
     right: 0;
     z-index: 32;
     color: white;

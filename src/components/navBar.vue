@@ -115,7 +115,7 @@ export default {
       bottom: 8vh;
       left: 8vw;
       img {
-        width: 5vw;
+        width: 4vw;
         
         opacity: 0.8;
       }
