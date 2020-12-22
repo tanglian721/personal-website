@@ -6,7 +6,7 @@
     <div id="slider">
       <hooper id="frame" :settings="hooperSettings">
         <slide id="Homedeliciouse" class="portfolio-content">
-          <h3 class="title">Okotoks Pizza Version 1</h3>
+          <h3 class="title">Home delicious website</h3>
           <div class="content">
             <img
               class="img desk"

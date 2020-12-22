@@ -10,6 +10,7 @@
       <li>JavaScript</li>
       <li>Vue.js</li>
       <li>Python</li>
+      <li>Flask</li>
       <li>MaribaDB</li>
       <li>DBeaver</li>
       <li>Figma</li>
