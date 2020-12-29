@@ -31,7 +31,7 @@ export default {
     getProjects() {
       axios
         .request({
-          url: "http://127.0.0.1:5000/api/project",
+          url: "https://liangtang.ml/api/project",
           method: "get",
         })
         .then((response) => {
@@ -51,7 +51,9 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/style/style.scss";
-
+html {
+  scroll-behavior: smooth;
+}
 .project {
   width: 100vw;
   min-height: 160vh;

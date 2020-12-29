@@ -14,7 +14,7 @@
         <a href="https://github.com/tanglian721">GitHub</a>
       </div>
       <div class="resume">
-        <a href="../assets/Liang Tang Resume.pdf" download>Resume</a>
+        <a href="https://liangtang.ml/img/projects/Liang_Tang_Resume.pdf" download>Resume</a>
       </div>
     </div>
     <div class="message">
@@ -57,7 +57,7 @@ export default {
     message() {
       axios
         .request({
-          url: "http://127.0.0.1:5000/api/message",
+          url: "https://liangtang.ml/api/message",
           method: "post",
           data: {
             name: this.name,

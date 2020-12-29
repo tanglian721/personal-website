@@ -9,11 +9,8 @@
      <vue-aos animation-class="animate__animated animate__slideInRight">
       <p id="content">
         Hey There! <br />
-        My name is Liang (Taylor) Tang . I am a full stack development student.
-        I'm currently enrolled in a Full Stack Development Diploma program,
-        graduating in December of 2020. I like photography, cooking, soccer,
-        video games and CODING. I am looking for my first job or internship of
-        web development. Please contact me if you are interested in chatting
+        My name is Liang (Taylor) Tang. I am a Full Stack Web Developer with a great passion for web development. I am looking for my first job or internship of
+        web development. I hope my knowledge of programing and design can bring you the most value. Please contact me if you are interested in chatting
         with me!
       </p>
     </vue-aos>

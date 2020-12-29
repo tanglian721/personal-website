@@ -1,14 +1,14 @@
 <template>
   <div class="home">
     <div
-      @click="toggleMenu"
+      
       class="mobile-background"
       v-if="this.$store.getters.mobile"
     >
-      <img src="../assets/IMG_9369-1.png" alt="" />
+      <img @click="toggleMenu" src="../assets/bg-half.jpg" alt="" />
     </div>
-    <div class="mobile-background">
-      <img src="../assets/IMG_9369-1.png" alt="" />
+    <div class="mobile-background" v-if="this.$store.getters.desktop">
+      <img src="../assets/bg.jpg" alt="" />
     </div>
     <logo-div />
     <!-- <img src="../assets/logo-w.png" alt="" class="logo" /> -->
@@ -108,7 +108,7 @@ export default {
     img{
       position: absolute;
       z-index: 2;
-      right: -170%;
+      right: 0;
       top: -10vh;
       height: 120vh;
       position: absolute;

@@ -6,23 +6,19 @@
     </div>
     <transition name="hiden-show">
       <div class="hide" v-if="show">
-        <img src="../assets/HomeDelicious-d.png" alt="" />
+        <img v-if="this.$store.getters.desktop" :src="project.Image_L" alt="" />
+        <img v-else :src="project.image_s" alt="" />
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit numquam,
-          ipsum molestias harum temporibus maiores quasi saepe repudiandae
-          voluptatibus veniam. Consequuntur, neque eaque tempora ad inventore
-          rerum incidunt expedita accusantium.
+         {{project.description}}
         </p>
         <p>{{ project.other }}</p>
         <div class="link">
-          <div class="visit">
-            Visit
-            <div class="underline"></div>
-          </div>
-          <div class="visit">
+          <a class="visit" :href="project.https">Visit
+            <div class="underline"></div></a>
+          <a class="visit" :href="project.code">
             View Code
             <div class="underline"></div>
-          </div>
+          </a>
         </div>
       </div>
     </transition>
@@ -50,14 +46,25 @@ export default {
   },
   methods: {
     detail() {
+      let i = false;
+      if (this.show){
+        i = true
+      }
       this.$store.state.show_hide = !this.$store.state.show_hide;
+      if(this.$store.getters.desktop){
       setTimeout(() => {
         this.move = this.active
-      }, 100);
+      }, 100);}
       setTimeout(() => {
-        this.show = true;
+        if (i){
+          this.show = false
+        }else {
+        this.show = true;}
       }, 500);
     },
+    website(){
+
+    }
   },
   watch: {
     close(newValue) {
