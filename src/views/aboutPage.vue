@@ -9,6 +9,9 @@
         <h1>Full stack</h1>
       </vue-aos>
       <vue-aos animation-class="animate__animated animate__slideInRight">
+        <h1>Web</h1>
+      </vue-aos>
+      <vue-aos animation-class="animate__animated animate__slideInRight">
         <h1>Developer</h1>
       </vue-aos>
     </div>
