@@ -26,5 +26,8 @@ export default {
   img {
     width: 4em;
   }
+  &:hover{
+    cursor: pointer;
+  }
 }
 </style>

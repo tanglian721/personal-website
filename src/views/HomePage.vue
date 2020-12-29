@@ -1,10 +1,6 @@
 <template>
   <div class="home">
-    <div
-      
-      class="mobile-background"
-      v-if="this.$store.getters.mobile"
-    >
+    <div class="mobile-background" v-if="this.$store.getters.mobile">
       <img @click="toggleMenu" src="../assets/bg-half.jpg" alt="" />
     </div>
     <div class="mobile-background" v-if="this.$store.getters.desktop">
@@ -16,22 +12,53 @@
       <div v-if="iftitle" class="title">
         <div class="group">
           <transition name="top">
-            <h1 v-if="ifhello" class="hello" key="hello" @mouseover="ifhello = false">Hello,</h1>
-            <h1 v-else @click="aboutPage" class="about" key="about" @mouseleave="ifhello = true">about</h1>
+            <h1 v-if="ifhello" class="hello" key="hello" @mouseover="showAbout">
+              Hello,
+            </h1>
+            <h1
+              v-else
+              @click="aboutPage"
+              class="about"
+              key="about"
+              @mouseleave="ifhello = true"
+            >
+              about
+            </h1>
           </transition>
         </div>
         <div class="group">
           <transition name="middle">
-            <h1 v-if="ifiam" class="iam" key="iam" @mouseover="ifiam = false">I am</h1>
-            <h1 v-else class="project" @click="projectPage" key="project" @mouseleave="ifiam = true">
+            <h1 v-if="ifiam" class="iam" key="iam" @mouseover="showProjects">
+              I am
+            </h1>
+            <h1
+              v-else
+              class="project"
+              @click="projectPage"
+              key="project"
+              @mouseleave="ifiam = true"
+            >
               project
             </h1>
           </transition>
         </div>
         <div class="group">
           <transition name="bottom">
-            <h1 v-if="ifliang" class="liang" key="liang" @mouseover="ifliang = false">Liang</h1>
-            <h1 v-else class="contact" key="contact" @click="contactPage" @mouseleave="ifliang = true">
+            <h1
+              v-if="ifliang"
+              class="liang"
+              key="liang"
+              @mouseover="showContact"
+            >
+              Liang
+            </h1>
+            <h1
+              v-else
+              class="contact"
+              key="contact"
+              @click="contactPage"
+              @mouseleave="ifliang = true"
+            >
               contact
             </h1>
           </transition>
@@ -78,6 +105,33 @@ export default {
         this.$router.push("contact");
       }, 800);
     },
+    showAbout() {
+      if (this.$store.getters.desktop) {
+        this.ifhello = false;
+      } else {
+        this.ifhello = !this.ifhello;
+        this.ifiam = !this.ifiam;
+        this.ifliang = !this.ifliang;
+      }
+    },
+    showProjects() {
+      if (this.$store.getters.desktop) {
+        this.ifiam = false;
+      } else {
+        this.ifhello = !this.ifhello;
+        this.ifiam = !this.ifiam;
+        this.ifliang = !this.ifliang;
+      }
+    },
+    showContact() {
+      if (this.$store.getters.desktop) {
+        this.ifliang = false;
+      } else {
+        this.ifhello = !this.ifhello;
+        this.ifiam = !this.ifiam;
+        this.ifliang = !this.ifliang;
+      }
+    },
   },
   computed: {
     name() {
@@ -105,7 +159,7 @@ export default {
     width: 100%;
     height: 100vh;
     // background-color: black;
-    img{
+    img {
       position: absolute;
       z-index: 2;
       right: 0;
@@ -168,74 +222,75 @@ export default {
   transform: rotateY(90deg);
 }
 @media only screen and (min-width: 1024px) {
-.home {
-  box-sizing: border-box;
-  position: relative;
-  height: 100vh;
-  display: grid;
-  align-items: center;
-  overflow: hidden;
-  width: 100vw;
-  // background-color: #fff;
-  .mobile-background {
-    position: absolute;
-    top: 0;
-    z-index: 1;
-    width: 100%;
+  .home {
+    box-sizing: border-box;
+    position: relative;
     height: 100vh;
-    // background-color: black;
-    img{
-      position: absolute;
-      z-index: 2;
-      right: 0;
-      top: 0;
-      height: 100vh;
-      width: 100%;
-      object-fit: cover;
-      position: absolute;
-    }
-  }
-  .title {
-    z-index: 5;
-    top: 25vh;
-    left: 20vw;
-    position: absolute;
     display: grid;
-    height: 25em;
-    // justify-items: end;
-    width: fit-content;
-    .group {
-      height: 4.5em;
-      overflow: hidden;
-    }
-    h1 {
-      color: white;
-      font-family: $fontTitle;
-      font-size: 3.5rem;
-      &:hover{
-        cursor: pointer;
+    align-items: center;
+    overflow: hidden;
+    width: 100vw;
+    // background-color: #fff;
+    .mobile-background {
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100vh;
+      // background-color: black;
+      img {
+        position: absolute;
+        z-index: 2;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
       }
     }
-    .hello,
-    .about {
-      color: red;
+    .title {
+      z-index: 5;
+      top: 25vh;
+      left: 20vw;
+      position: absolute;
+      display: grid;
+      height: 25em;
+      // justify-items: end;
+      width: fit-content;
+      .group {
+        height: 4.5em;
+        overflow: hidden;
+      }
+      h1 {
+        color: white;
+        font-family: $fontTitle;
+        font-size: 3.5rem;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .hello,
+      .about {
+        color: red;
+      }
+    }
+    .logo {
+      position: absolute;
+      z-index: 5;
+      width: 4em;
+      top: 1em;
+      right: 2em;
     }
   }
-  .logo {
-    position: absolute;
-    z-index: 5;
-    width: 4em;
-    top: 1em;
-    right: 2em;
-  }}
   .top-enter-active {
-  transition: all 0.3s linear;
-}
+    transition: all 0.3s linear;
+  }
   .middle-enter-active {
-  transition: all 0.3s linear;
-}
-.bottom-enter-active {
-  transition: all 0.3s linear;
-}
+    transition: all 0.3s linear;
+  }
+  .bottom-enter-active {
+    transition: all 0.3s linear;
+  }
 }
 </style>
