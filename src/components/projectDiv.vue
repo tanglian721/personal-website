@@ -8,10 +8,12 @@
       <div class="hide" v-if="show">
         <img v-if="this.$store.getters.desktop" :src="project.Image_L" alt="" />
         <img v-else :src="project.image_s" alt="" />
-        <p>
-          {{ project.description }}
-        </p>
-        <p :v-html="project.other"></p>
+        <div>
+          <p>
+            {{ project.description }}
+          </p>
+          <p>{{ project.other }}</p>
+        </div>
         <div class="link">
           <a class="visit" :href="project.https"
             >Visit
@@ -57,7 +59,7 @@ export default {
       }
       this.$store.state.show_hide = !this.$store.state.show_hide;
       if (this.$store.getters.desktop) {
-        console.log("a")
+        console.log("a");
         setTimeout(() => {
           this.move = this.active;
         }, 100);
@@ -165,20 +167,28 @@ html {
     .hide {
       z-index: 10;
       position: fixed;
-      margin-top: 3em;
+      margin-top: 2em;
       top: 10vh;
       right: 10vw;
       display: grid;
       justify-items: center;
       width: 30vw;
       margin-left: 0;
-      row-gap: 2em;
+      row-gap: 1em;
       overflow: hidden;
       transform-origin: top;
       transition: transform 0.4s ease-in-out;
       overflow: hidden;
       img {
         width: 100%;
+        height: 20vw;
+        object-fit: cover;
+        overflow: hidden;
+      }
+
+      p{
+        margin-top: 5px;
+         text-indent:1.5em
       }
       .link {
         display: grid;
