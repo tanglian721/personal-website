@@ -11,7 +11,7 @@
         <p>
           {{ project.description }}
         </p>
-        <p>{{ project.other }}</p>
+        <p :v-html="project.other"></p>
         <div class="link">
           <a class="visit" :href="project.https"
             >Visit
