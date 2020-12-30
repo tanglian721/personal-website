@@ -93,7 +93,7 @@ export default {
 
 .contact {
   width: 100vw;
-  height: 160vh;
+  height: 120vh;
   position: relative;
   background-color: black;
   h1 {

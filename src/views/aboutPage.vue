@@ -112,12 +112,12 @@ export default {
 @media only screen and (min-width: 1024px) {
   .about {
   width: 100vw;
-  height: 160vh;
+  height: 100vh;
   position: relative;
   background-color: black;
   .title {
     position: relative;
-    top: 20vh;
+    top: 15vh;
     box-sizing: border-box;
     margin-left: 10vw;
     h1 {
@@ -144,7 +144,7 @@ export default {
     color: white;
     font-family: $fonts;
     box-sizing: border-box;
-    top: 50vh;
+    top: 45vh;
     width: 80%;
     margin-left: 10%;
     line-height: 2rem;

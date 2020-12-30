@@ -1,6 +1,6 @@
 <template>
   <div class="project-div">
-    <div class="menu" @click="detail" :style="move">
+    <div class="menu" @click="detail" :style="move" id="mark">
       <h1>{{ project.name }}</h1>
       <h3>{{ project.brief }}</h3>
     </div>
@@ -9,12 +9,14 @@
         <img v-if="this.$store.getters.desktop" :src="project.Image_L" alt="" />
         <img v-else :src="project.image_s" alt="" />
         <p>
-         {{project.description}}
+          {{ project.description }}
         </p>
         <p>{{ project.other }}</p>
         <div class="link">
-          <a class="visit" :href="project.https">Visit
-            <div class="underline"></div></a>
+          <a class="visit" :href="project.https"
+            >Visit
+            <div class="underline"></div
+          ></a>
           <a class="visit" :href="project.code">
             View Code
             <div class="underline"></div>
@@ -34,9 +36,9 @@ export default {
       active: {
         transform: "translateX(5%)",
       },
-      unactive:{
-        transform: "translateX(0)"
-      }
+      unactive: {
+        transform: "translateX(0)",
+      },
     };
   },
   props: {
@@ -46,31 +48,34 @@ export default {
   },
   methods: {
     detail() {
+      // let top = document.getElementById("mark");
+      // console.log(top.scrollTop);
+      // console.log(top.offset);
       let i = false;
-      if (this.show){
-        i = true
+      if (this.show) {
+        i = true;
       }
       this.$store.state.show_hide = !this.$store.state.show_hide;
-      if(this.$store.getters.desktop){
+      if (this.$store.getters.desktop) {
+        console.log("a")
+        setTimeout(() => {
+          this.move = this.active;
+        }, 100);
+      }
       setTimeout(() => {
-        this.move = this.active
-      }, 100);}
-      setTimeout(() => {
-        if (i){
-          this.show = false
-        }else {
-        this.show = true;}
-      }, 500);
+        if (i) {
+          this.show = false;
+        } else {
+          this.show = true;
+        }
+      }, 200);
     },
-    website(){
-
-    }
+    website() {},
   },
   watch: {
-    close(newValue) {
-      console.log(newValue);
+    close() {
       this.show = false;
-      this.move = this.unactive
+      this.move = this.unactive;
       // document.getElementById("move").style.transform = "None"
     },
   },
@@ -84,10 +89,12 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/style/style.scss";
-
+html {
+  scroll-behavior: smooth;
+}
 .project-div {
-  transition: transform 0.4s ease-in-out;
   .menu {
+    transition: scroll 1s ease-in-out;
     background-color: BLACK;
     h1 {
       font-family: $fontTitle;
@@ -108,6 +115,8 @@ export default {
     transform-origin: top;
     transition: transform 0.4s ease-in-out;
     overflow: hidden;
+    font-family: $fonts;
+    font-size: 1.2rem;
     img {
       width: 100%;
     }
