@@ -19,8 +19,8 @@
       <p class="content">
         Hey There! <br />
         <br />
-        My name is Liang (Taylor) Tang. I am a Full Stack Web Developer with a great passion for web development. I am looking for my first job or internship of
-        web development. I hope my knowledge of programing and design can bring you the most value. Please contact me if you are interested in chatting
+        My name is Liang (Taylor) Tang. I am a Full Stack Web Developer with a great passion for web development. I am looking for my first job or internship in
+        web development. I hope my knowledge of programming and design can bring you the most value. Please contact me if you are interested in chatting
         with me!
       </p>
     </vue-aos>
