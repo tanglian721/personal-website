@@ -6,6 +6,7 @@
     <div class="mobile-background" v-if="this.$store.getters.desktop">
       <img src="../assets/bg.jpg" alt="" />
     </div>
+    <p class="tap" v-if="this.$store.getters.mobile">Tap anywhere</p>
     <logo-div />
     <!-- <img src="../assets/logo-w.png" alt="" class="logo" /> -->
     <transition appear name="title">
@@ -198,6 +199,26 @@ export default {
     top: 1em;
     right: 2em;
   }
+}
+.tap{
+  z-index: 10;
+  color: white;
+  font-size: 1rem;
+  position: absolute;
+  bottom: 10vh;
+  width: 100%;
+  font-family: $fonts;
+  text-align: center;
+  animation: tap 1s infinite;
+}
+@keyframes tap {
+  0% {transform: translateY(0)};
+  20% {transform: translateY(0)};
+  // 30% {transform: translateY(-10%)};
+  50% {transform: translateY(-20%)};
+  // 65% {transform: translateY(-30%)};
+  80% {transform: translateY(0)};
+  100% {transform: translateY(0)};
 }
 .top-enter-active {
   transition: all 0.5s linear;

@@ -65,12 +65,13 @@ export default {
 
 .about {
   width: 100vw;
-  height: 160vh;
+  // height: 180vh;
+  padding-bottom: 10vh;
   position: relative;
   background-color: black;
   .title {
     position: relative;
-    top: 20vh;
+    padding-top: 20vh;
     box-sizing: border-box;
     margin-left: 10vw;
     h1 {
@@ -85,7 +86,7 @@ export default {
     font-family: $fonts;
     font-size: 1.2rem;
     box-sizing: border-box;
-    top: 30vh;
+    padding-top: 10vh;
     width: 80%;
     margin-left: 10%;
     line-height: 2rem;
@@ -95,7 +96,7 @@ export default {
     color: white;
     font-family: $fonts;
     box-sizing: border-box;
-    top: 40vh;
+    padding-top: 15vh;
     width: 80%;
     margin-left: 10%;
     line-height: 2rem;
