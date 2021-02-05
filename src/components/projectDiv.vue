@@ -113,7 +113,6 @@ html {
     width: 90%;
     margin-left: 5%;
     row-gap: 2em;
-    overflow: hidden;
     transform-origin: top;
     transition: transform 0.4s ease-in-out;
     overflow: hidden;
@@ -175,10 +174,10 @@ html {
       width: 30vw;
       margin-left: 0;
       row-gap: 1em;
-      overflow: hidden;
       transform-origin: top;
       transition: transform 0.4s ease-in-out;
-      overflow: hidden;
+      height: 70vh;
+      overflow: auto;
       img {
         width: 100%;
         height: 20vw;
