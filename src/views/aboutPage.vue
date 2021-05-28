@@ -34,8 +34,12 @@
           <li>CSS3/SASS</li>
           <li>JavaScript</li>
           <li>Vue.js</li>
+          <li>Nuxt</li>
           <li>React.js</li>
+          <li>Bootstrap</li>
+          <li>Tailwind</li>
           <li>Redux</li>
+          <li>jQuery</li>
           <li>Python</li>
           <li>Flask</li>
           <li>MaribaDB</li>
@@ -116,8 +120,8 @@ export default {
 @media only screen and (min-width: 1024px) {
   .about {
     width: 100vw;
-    height: 100vh;
     position: relative;
+    padding-bottom: 45vh;
     background-color: black;
     .title {
       position: relative;
