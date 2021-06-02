@@ -4,12 +4,12 @@
       <div class="back"></div>
     </transition>
     <img class="gif" src="../assets/bgc.gif" alt="" />
-      <div class="logo" >
-    <transition appear name="logo-fade">
+    <div class="logo">
+      <transition appear name="logo-fade">
         <img v-if="enter" src="../assets/logo-w.png" alt="" />
-    </transition>
-      </div>
-    <div class="enter" >
+      </transition>
+    </div>
+    <div class="enter">
       <transition appear name="button-fade">
         <div class="button" v-if="enter" @click="home"><u>Enter...</u></div>
       </transition>
@@ -26,9 +26,9 @@ export default {
   },
   methods: {
     home() {
-        setTimeout(() => {
-          this.$router.push("/homepage");
-        }, 1000);
+      setTimeout(() => {
+        this.$router.push("/homepage");
+      }, 1000);
       this.enter = false;
     },
   },
@@ -106,7 +106,7 @@ export default {
 }
 .logo-fade-leave-to {
   opacity: 0;
-//   transform: rotateX(90deg);
+  //   transform: rotateX(90deg);
   transform: scale(10);
 }
 
@@ -120,10 +120,13 @@ export default {
   transition: all 0.5s ease-in;
 }
 .button-fade-leave-to {
-  opacity:0;
+  opacity: 0;
 }
 
 @media only screen and (min-width: 1024px) {
+  .gif{
+    width: 100vw;
+  }
   .logo {
     img {
       width: 10vw;
